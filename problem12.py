@@ -10,7 +10,7 @@ def trianges():
 def count_divisors(n):
     divs = 2 # 1 divides everything
     if n > 2:
-        for i in xrange(2, int(n**.5)):
+        for i in range(2, int(n**.5)):
             if n % i == 0:
                 divs += 2
     return divs
@@ -18,8 +18,8 @@ def count_divisors(n):
 done = False
 a = trianges()
 while not done:
-    num = a.next()
+    num = next(a)
     if count_divisors(num) > 500:
         done = True
 
-print num
+print(num)

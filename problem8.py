@@ -19,21 +19,19 @@ a = '73167176531330624919225119674426574742355349194934\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450'
 
+
+import numpy as np
 def make_prod(inp):
-    a, b, c, d, e = inp
-    a = int(a)
-    b = int(b)
-    c = int(c)
-    d = int(d)
-    e = int(e)
-    return a*b*c*d*e
+    nums = np.array([int(i) for i in inp])
+    product = nums.prod()
+    return product
 
 largest = 0
 
-for i in xrange(len(a) - 4):
+for i in range(len(a) - 12):
     # print a[i:(i + 5)]
-    b = make_prod(a[i:(i + 5)])
+    b = make_prod(a[i:(i + 13)])
     if b > largest:
         largest = b
 
-print largest
+print(largest)

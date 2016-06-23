@@ -1,10 +1,15 @@
 a = 1
-b = 1
-sum = 0
+b = 2
+s = 0
 c = 0
 while c < 4000001:
+    print(a)
+    print(b)
     c = a + b
-    sum = sum + c
-    a = c + b
-    b = c + a
-print sum
+    if a%2 == 0:
+        s = s + a
+    if b%2 == 0:
+        s = s + b
+    a = c
+    b = c + b
+print("Answer: {}".format(s))

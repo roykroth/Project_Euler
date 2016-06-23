@@ -6,9 +6,9 @@ def is_palindrome(x):
 
 largest = -1
 from itertools import product
-for x, y in product(xrange(100, 1000), xrange(100, 1000)):
+for x, y in product(range(100, 1000), range(100, 1000)):
     prod = x*y
     if is_palindrome(prod) and prod > largest:
         largest = prod
 
-print largest
+print(largest)
